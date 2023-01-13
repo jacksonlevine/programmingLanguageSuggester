@@ -1,7 +1,8 @@
 onload = function() {
   let form = document.querySelector("form");
 
-  form.onsubmit = function(event) {
+  form.onsubmit = takeForm;
+  function takeForm(event) {
     event.preventDefault();
     let freeTimeOpts = document.getElementsByName("freeTime");
     let weatherOpts = document.getElementsByName("weather");
@@ -50,27 +51,23 @@ onload = function() {
       choiceForUser = "Java";
     } else
     if(weather === "rainy") {
+      if(choiceForUser != "PHP") {
       choiceForUser = "Rust";
+      }
     } else
     if(weather === "snowy") {
+      if(choiceForUser != "Objective C") {
       choiceForUser = "MATLAB"
+      }
     }
 
     if(favAnimal.toUpperCase() === "SNAKE" || favAnimal.toUpperCase() === "PYTHON" || favAnimal.toUpperCase() === "BOA CONSTRICTOR") {
       choiceForUser = "Python";
     }
 
-    if(parseInt(age) < 18) {
-      if(parseInt(age) > 9) {
-      choiceForUser = "Lua";
-      } else {
-        choiceForUser = "Scratch";
-      }
-    }
-
     if(freeTime === "r4") {
-      if(choiceForUser != "Scratch" && choiceForUser != "LUA") {
-      choiceForUser = "Assembly x86";
+      if(choiceForUser != "Scratch" && choiceForUser != "LUA" && choiceForUser != "Java" && choiceForUser != "Python") {
+      choiceForUser = "x86 Assembly";
       }
     } else
     if(freeTime === "r1") {
@@ -82,7 +79,7 @@ onload = function() {
       }
     } else
     if(freeTime === "r3") {
-      if(choiceForUser != "Java" && choiceForUser != "Rust" && choiceForUser != "Scratch" && choiceForUser != "LUA") {
+      if(choiceForUser != "Java" && choiceForUser != "Rust" && choiceForUser != "Scratch" && choiceForUser != "LUA" && choiceForUser != "Python" && choiceForUser != "MATLAB") {
       choiceForUser = "C++";
       }
       if(parseInt(age) < 18) {
@@ -90,10 +87,49 @@ onload = function() {
       }
     }
 
+    if(parseInt(age) < 18) {
+      if(parseInt(age) > 9) {
+      choiceForUser = "Lua";
+      } else {
+        choiceForUser = "Scratch";
+      }
+    }
 
+    if(weather === "sunny") {
+      if(choiceForUser === "Python") {
+        choiceForUser = "Ruby";
+      }
+    } else
+    if(weather === "cloudy") {
+      if(choiceForUser === "Lua") {
+        choiceForUser = "Python"
+      }
+    } else
+    if(weather === "rainy") {
+      if(choiceForUser === "C#") {
+        choiceForUser = "JavaScript";
+      }
+      if(choiceForUser === "Python") {
+        choiceForUser = "Go";
+      }
+    } else
+    if(weather === "snowy") {
+      if(choiceForUser === "C++" || choiceForUser === "x86 Assembly") {
+        choiceForUser = "RISC-V Assembly";
+      }
+      if(choiceForUser === "Python") {
+        choiceForUser = "Kotlin";
+      }
+    }
+
+    let ansPrelude = document.querySelector(".hidden");
+    
+    if(ansPrelude != null) {
+    ansPrelude.removeAttribute("class");
+    ansPrelude.setAttribute("class", "answerPrelude");
+    }
 
     let answerSpot = document.querySelector(".theAnswer");
-    console.log(favColor);
     answerSpot.innerHTML = choiceForUser;
   }
 }

@@ -9,18 +9,24 @@
   <div class="headBanner">
     Programming Language Suggester!
   </div>
+  <div class="headSmaller">
+    By <span class="bold">Jackson Levine</span>
+  </div>
+  <div class="headSmallest">
+    <span class="bold">All questions are optional, but they are all factored in!</span>
+  </div>
   <div class="mainBody">
     <div class="inputSection">
     <form>
-      <div class="yellow">
-        <label for="favColor">Your favorite color:</label>
+      <div class="yellow" id="hover">
+        <label for="favColor">Pick your favorite color:</label><br>
         <input type="color" id="favColor" name="favColor"><br>
       </div>
-      <div class="orange">
-        <label for="favAnimal">Your favorite animal:</label>
+      <div class="orange" id="hover">
+        <label for="favAnimal">Pick your favorite animal:</label>
         <input type="text" id="favAnimal" name="favAnimal"><br>
       </div>
-      <div class="red">
+      <div class="red" id="hover">
         <p>How much free time do you have?</p>
         <input type="radio" id="r1" name="freeTime">
         <label for="freeTime">None</label><br>
@@ -31,7 +37,7 @@
         <input type="radio" id="r4" name="freeTime">
         <label for="freeTime">An insane amount</label><br>
       </div>
-      <div class="purple">
+      <div class="purple" id="hover">
         <p>What is your preferred weather?</p>
         <input type="radio" id="sunny" name="weather">
         <label for="weather">Sunny</label><br>
@@ -42,18 +48,20 @@
         <input type="radio" id="snowy" name="weather">
         <label for="weather">Snowy</label><br>
       </div>
-      <div class="blue">
-        <label for="age">What is your age?</label>
+      <div class="blue" id="hover">
+        <label for="age">What is your age?</label><br>
         <input type="number" id="age" name="age">
       </div>
-      <div class="green">
+      <div class="green" id="hover">
         <button type="submit">See my suggested language!</button>
       </div>
     </form>
     </div>
     <div class="answerSection">
+      <div class="hidden">
+        Your best bet is to learn to program in...
+      </div>
       <div class="theAnswer">
-        Test
       </div>
     </div>
   </div>

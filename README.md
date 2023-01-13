@@ -1,31 +1,31 @@
-# (Application Name)
+# Programming Language Suggestor
 
-#### (Brief Description of Application)
+#### Recommends a programming language to the user based on 5 questions.
 
-#### By (Your Name Here)
+#### By Jackson Levine
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* HTML
+* CSS styles
+* JavaScript event handlers
+* Web API properties and methods to update the DOM
 
 ## Description
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+1. Clone this repository
+2. Navigate to the top folder
+3. Open "index.html"!
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* Possibly will recommend x86 Assembly or C++ to an 8 year old child. (FIXED)
+* Recommending Rust too often.
 
 ## License
+Creative Commons
 
 ## Contact Information
+Please contact me at jack@netbug.us to report bugs or ask questions!

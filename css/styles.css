@@ -1,14 +1,17 @@
+html {
+  font-family:sans-serif;
+}
+
 .mainBody {
   display:flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-start;
 }
 
 body {
   display:flex;
   flex-direction:column;
-  align-items: center;
   background-color: black;
+  user-select: none;
 }
 
 .inputSection {
@@ -24,9 +27,10 @@ body {
   flex-direction:column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
   font-size:400%;
   color:aliceblue;
+  user-select: none;
 }
 
 .headBanner {
@@ -34,6 +38,59 @@ body {
   text-align: center;
   font-size:300%;
   color:aliceblue;
+  user-select: none;
+}
+
+.hidden {
+  display:none;
+}
+
+.answerPrelude {
+  text-align:center;
+  font-size:large;
+}
+
+.headSmaller {
+  color:aliceblue;
+  font-size: 100%;
+  margin:0 15.25%;
+  text-align: right;
+  user-select: none;
+}
+.headSmallest {
+  color:aliceblue;
+  font-size: 100%;
+  margin:0 15.25%;
+  text-align: left;
+  user-select: none;
+}
+
+.bold {
+  font-weight: 500%;
+  font-size:115%;
+}
+
+div#hover.showing {
+  margin:10px 0;
+}
+
+@keyframes startSpacing{
+  from{
+    margin:0 0;
+  }
+  to{
+    margin:25px 0;
+  }
+}
+
+div#hover {
+  transition:all 200ms ease-in-out;
+  animation: startSpacing 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+div#hover:hover {
+  transform:scale(1.02);
 }
 
 .yellow {
