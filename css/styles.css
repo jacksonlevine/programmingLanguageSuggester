@@ -1,0 +1,33 @@
+.mainBody {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.inputSection {
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.answerSection {
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.headBanner {
+  display:block;
+  text-align: center;
+  font-size:300%;
+}
