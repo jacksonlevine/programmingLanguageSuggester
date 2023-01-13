@@ -36,6 +36,8 @@ body {
 
 .theAnswer {
   font-size: 400%;
+  font-weight:bolder;
+  font-style:italic;
 }
 
 p#resources {

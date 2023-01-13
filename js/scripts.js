@@ -23,8 +23,11 @@ onload = function() {
     }
     let age = document.getElementById("age").value;
 
+    let answerSpot = document.querySelector(".theAnswer");
+
     let choiceForUser = "C++";
     let resForLang = "https://cplusplus.com/";
+    answerSpot.setAttribute("style", "color: red");
 
     if(favColor.charAt(1) === "f") {
       choiceForUser = "Ruby";
@@ -94,7 +97,7 @@ onload = function() {
     } else
     if(freeTime === "r3") {
       if(choiceForUser != "Java" && choiceForUser != "Rust" && choiceForUser != "Scratch" && choiceForUser != "LUA" && choiceForUser != "Python" && choiceForUser != "MATLAB") {
-      choiceForUser = "C++";
+      choiceForUser = "C++"; 
       }
       if(parseInt(age) < 18) {
         choiceForUser = "Lua";
@@ -152,7 +155,7 @@ onload = function() {
     ansPrelude.setAttribute("class", "answerPrelude");
     }
 
-    let answerSpot = document.querySelector(".theAnswer");
+    
     answerSpot.innerHTML = choiceForUser;
     let resourceSentence = document.getElementById("resources");
     if(choiceForUser === "None") {

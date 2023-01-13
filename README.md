@@ -21,8 +21,7 @@
 
 ## Known Bugs
 
-* Possibly will recommend x86 Assembly or C++ to an 8 year old child. (FIXED)
-* Recommending Rust too often.
+* Possibly will recommend C++ to a young child
 
 ## License
 Creative Commons
