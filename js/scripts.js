@@ -24,40 +24,51 @@ onload = function() {
     let age = document.getElementById("age").value;
 
     let choiceForUser = "C++";
+    let resForLang = "https://cplusplus.com/";
 
     if(favColor.charAt(1) === "f") {
       choiceForUser = "Ruby";
+      resForLang = "https://www.tutorialspoint.com/ruby/ruby_resources.htm"
     } else
     if(favColor.charAt(2) === "f") {
-      choiceForUser = "Ruby on Rails";
+      choiceForUser = "Ruby";
+      resForLang = "https://www.tutorialspoint.com/ruby/ruby_resources.htm"
     } else
     if(favColor.charAt(3) === "f") {
       choiceForUser = "Lua";
+      resForLang = "http://www.lua.org/";
     } else
     if(favColor.charAt(4) === "e") {
       choiceForUser = "JavaScript";
+      resForLang = "https://developer.mozilla.org/en-US/docs/Web/javascript";
     } else
     if(favColor.charAt(5) === "f") {
       choiceForUser = "PHP";
+      resForLang = "https://www.php.net/manual/en/index.php";
     } else
     if(favColor.charAt(6) === "f") {
       choiceForUser = "Objective C";
+      resForLang = "https://www.tutorialspoint.com/objective_c/objective_c_useful_resources.htm";
     }
 
     if(weather === "sunny") {
       choiceForUser = "C#";
+      resForLang = "https://learn.microsoft.com/en-us/dotnet/csharp/";
     } else
     if(weather === "cloudy") {
       choiceForUser = "Java";
+      resForLang = "https://docs.oracle.com/javase/tutorial/";
     } else
     if(weather === "rainy") {
       if(choiceForUser != "PHP") {
       choiceForUser = "Rust";
+      resForLang = "https://www.rust-lang.org/learn";
       }
     } else
     if(weather === "snowy") {
       if(choiceForUser != "Objective C") {
       choiceForUser = "MATLAB"
+      resForLang = "https://www.mathworks.com/help/matlab/";
       }
     }
 
@@ -131,5 +142,7 @@ onload = function() {
 
     let answerSpot = document.querySelector(".theAnswer");
     answerSpot.innerHTML = choiceForUser;
+    let resourceLink = document.getElementById("resourceLink");
+    resourceLink.setAttribute("href")
   }
 }
