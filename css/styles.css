@@ -33,9 +33,14 @@ body {
   user-select: none;
 }
 
+.banner {
+  display:flex;
+  justify-content: center;
+}
+
 .headBanner {
   display:block;
-  text-align: center;
+  text-align: right;
   font-size:300%;
   color:aliceblue;
   user-select: none;
@@ -53,7 +58,6 @@ body {
 .headSmaller {
   color:aliceblue;
   font-size: 100%;
-  margin:0 15.25%;
   text-align: right;
   user-select: none;
 }
