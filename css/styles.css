@@ -8,6 +8,7 @@ body {
   display:flex;
   flex-direction:column;
   align-items: center;
+  background-color: black;
 }
 
 .inputSection {
@@ -25,12 +26,14 @@ body {
   align-items: center;
   width: 50%;
   font-size:400%;
+  color:aliceblue;
 }
 
 .headBanner {
   display:block;
   text-align: center;
   font-size:300%;
+  color:aliceblue;
 }
 
 .yellow {
