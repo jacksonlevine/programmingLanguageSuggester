@@ -33,6 +33,15 @@ body {
   user-select: none;
 }
 
+.theAnswer {
+  font-size: 400%;
+}
+
+p#resources {
+  color:purple;
+  font-size:medium;
+}
+
 .banner {
   display:flex;
   justify-content: center;
@@ -74,6 +83,13 @@ body {
   font-size:115%;
 }
 
+a {
+  color:red;
+}
+a:visited {
+  color:red;
+}
+
 div#hover.showing {
   margin:10px 0;
 }
@@ -83,13 +99,13 @@ div#hover.showing {
     padding:20px;
   }
   to{
-    padding:40px 20px;
+    padding:30px 20px;
   }
 }
 
 @keyframes endSpacing{
   from{
-    padding:40px 20px;
+    padding:30px 20px;
   }
   to{
     padding:20px;
@@ -97,14 +113,14 @@ div#hover.showing {
 }
 
 div#hover {
-  transition:all 200ms ease-in-out;
-  animation: endSpacing 200ms ease-in-out;
+  transition:all 100ms ease-in-out;
+  animation: endSpacing 100ms ease-in-out;
   animation-fill-mode: forwards;
 }
 
 div#hover:hover {
-  transform:scale(1.02);
-  animation: startSpacing 200ms ease-in-out;
+  transform:scale(1.01);
+  animation: startSpacing 100ms ease-in-out;
   animation-fill-mode: forwards;
 }
 

@@ -28,11 +28,11 @@ onload = function() {
 
     if(favColor.charAt(1) === "f") {
       choiceForUser = "Ruby";
-      resForLang = "https://www.tutorialspoint.com/ruby/ruby_resources.htm"
+      resForLang = "https://www.tutorialspoint.com/ruby/ruby_resources.htm";
     } else
     if(favColor.charAt(2) === "f") {
       choiceForUser = "Ruby";
-      resForLang = "https://www.tutorialspoint.com/ruby/ruby_resources.htm"
+      resForLang = "https://www.tutorialspoint.com/ruby/ruby_resources.htm";
     } else
     if(favColor.charAt(3) === "f") {
       choiceForUser = "Lua";
@@ -74,11 +74,13 @@ onload = function() {
 
     if(favAnimal.toUpperCase() === "SNAKE" || favAnimal.toUpperCase() === "PYTHON" || favAnimal.toUpperCase() === "BOA CONSTRICTOR") {
       choiceForUser = "Python";
+      resForLang = "https://docs.python.org/3/";
     }
 
     if(freeTime === "r4") {
       if(choiceForUser != "Scratch" && choiceForUser != "LUA" && choiceForUser != "Java" && choiceForUser != "Python") {
       choiceForUser = "x86 Assembly";
+      resForLang = "https://www.codeproject.com/Articles/1273844/The-Intel-Assembly-Manual-3";
       }
     } else
     if(freeTime === "r1") {
@@ -87,6 +89,7 @@ onload = function() {
     if(freeTime === "r2") {
       if(choiceForUser != "Java" && choiceForUser != "C++" && choiceForUser != "Ruby" && choiceForUser != "Ruby on Rails") {
       choiceForUser = "C#";
+      resForLang = "https://learn.microsoft.com/en-us/dotnet/csharp/";
       }
     } else
     if(freeTime === "r3") {
@@ -95,41 +98,50 @@ onload = function() {
       }
       if(parseInt(age) < 18) {
         choiceForUser = "Lua";
+        resForLang = "http://www.lua.org/";
       }
     }
 
     if(parseInt(age) < 18) {
       if(parseInt(age) > 9) {
       choiceForUser = "Lua";
+      resForLang = "http://www.lua.org/";
       } else {
         choiceForUser = "Scratch";
+        resForLang = "https://www.scratch.ie/resources/";
       }
     }
 
     if(weather === "sunny") {
       if(choiceForUser === "Python") {
         choiceForUser = "Ruby";
+        resForLang = "https://www.tutorialspoint.com/ruby/ruby_resources.htm";
       }
     } else
     if(weather === "cloudy") {
       if(choiceForUser === "Lua") {
         choiceForUser = "Python"
+        resForLang = "https://docs.python.org/3/";
       }
     } else
     if(weather === "rainy") {
       if(choiceForUser === "C#") {
         choiceForUser = "JavaScript";
+        resForLang = "https://developer.mozilla.org/en-US/docs/Web/javascript";
       }
       if(choiceForUser === "Python") {
         choiceForUser = "Go";
+        resForLang = "https://go.dev/";
       }
     } else
     if(weather === "snowy") {
       if(choiceForUser === "C++" || choiceForUser === "x86 Assembly") {
         choiceForUser = "RISC-V Assembly";
+        resForLang = "https://riscv-programming.org/ale/";
       }
       if(choiceForUser === "Python") {
         choiceForUser = "Kotlin";
+        resForLang = "https://kotlinlang.org/";
       }
     }
 
@@ -142,7 +154,11 @@ onload = function() {
 
     let answerSpot = document.querySelector(".theAnswer");
     answerSpot.innerHTML = choiceForUser;
-    let resourceLink = document.getElementById("resourceLink");
-    resourceLink.setAttribute("href")
+    let resourceSentence = document.getElementById("resources");
+    if(choiceForUser === "None") {
+      resourceSentence.innerHTML = "Programming can be done, but not without first having free time."
+    } else {
+    resourceSentence.innerHTML = "Resources for "+ choiceForUser + " can be found <a href=\"" + resForLang + "\">here</a>.";
+    }
   }
 }
