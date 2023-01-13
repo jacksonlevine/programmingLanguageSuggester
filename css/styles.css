@@ -45,6 +45,8 @@ p#resources {
 .banner {
   display:flex;
   justify-content: center;
+  animation: fadeIn 500ms ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .headBanner {
@@ -109,6 +111,15 @@ div#hover.showing {
   }
   to{
     padding:20px;
+  }
+}
+
+@keyframes fadeIn {
+  from{
+    opacity:0%;
+  }
+  to {
+    opacity:100%;
   }
 }
 

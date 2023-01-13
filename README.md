@@ -17,7 +17,7 @@
 
 1. Clone this repository
 2. Navigate to the top folder
-3. Open "index.html"!
+3. Open "index.html" in any web browser
 
 ## Known Bugs
 
