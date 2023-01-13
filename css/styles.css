@@ -80,21 +80,32 @@ div#hover.showing {
 
 @keyframes startSpacing{
   from{
-    margin:0 0;
+    padding:20px;
   }
   to{
-    margin:25px 0;
+    padding:40px 20px;
+  }
+}
+
+@keyframes endSpacing{
+  from{
+    padding:40px 20px;
+  }
+  to{
+    padding:20px;
   }
 }
 
 div#hover {
   transition:all 200ms ease-in-out;
-  animation: startSpacing 1.5s ease-in-out;
+  animation: endSpacing 200ms ease-in-out;
   animation-fill-mode: forwards;
 }
 
 div#hover:hover {
   transform:scale(1.02);
+  animation: startSpacing 200ms ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .yellow {
