@@ -25,12 +25,13 @@ body {
 .answerSection {
   display:flex;
   flex-direction:column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   font-size:400%;
   color:aliceblue;
   user-select: none;
+  padding-top:100px;
 }
 
 .theAnswer {
